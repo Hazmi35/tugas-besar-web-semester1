@@ -17,7 +17,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-30 border-b bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 md:h-20 sm:px-6 md:px-8">
+      <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-20 md:h-20 sm:px-6 md:px-8">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm">
             TB
@@ -27,7 +27,7 @@ export function Navbar() {
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-6 text-sm font-medium sm:gap-6 sm:text-base sm:flex md:gap-8 sm:ml-8 md:ml-12">
+        <nav className="hidden flex-1 items-center justify-center gap-6 text-sm font-medium sm:gap-6 sm:text-base sm:flex md:gap-8 lg:gap-10">
           {navItems.map((item) => (
             <Link
               key={item.href}
@@ -39,7 +39,7 @@ export function Navbar() {
           ))}
         </nav>
 
-        <div className="ml-auto flex items-center gap-2">
+        <div className="ml-auto flex items-center gap-2 sm:ml-0">
           <Button size="sm" className="rounded-lg px-3 shadow-sm sm:hidden">
             Pesan
           </Button>
