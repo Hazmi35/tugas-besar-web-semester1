@@ -25,7 +25,7 @@ export function TentangSection() {
   return (
     <section
       id="tentang"
-      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24"
+      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24 min-h-[calc(100vh-80px-43px)]"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">

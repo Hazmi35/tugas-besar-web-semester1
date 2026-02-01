@@ -25,11 +25,38 @@ export function ProdukSection() {
       price: "Rp 52.000",
       image: "/placeholder-brownies.jpg",
     },
+    {
+      name: "Brownies Nutella",
+      description: "Brownies berlapis nutella dengan topping hazelnut crunchy",
+      price: "Rp 58.000",
+      image: "/placeholder-brownies.jpg",
+    },
+    {
+      name: "Brownies Triple Chocolate",
+      description: "Perpaduan tiga jenis cokelat untuk pengalaman ultimate",
+      price: "Rp 60.000",
+      image: "/placeholder-brownies.jpg",
+    },
+    {
+      name: "Brownies Peanut Butter",
+      description: "Brownies dengan selai kacang creamy dan kacang panggang",
+      price: "Rp 53.000",
+      image: "/placeholder-brownies.jpg",
+    },
+    {
+      name: "Brownies Oreo Crumble",
+      description: "Brownies dengan topping oreo crumble yang renyah",
+      price: "Rp 56.000",
+      image: "/placeholder-brownies.jpg",
+    },
   ];
 
   return (
-    <section id="produk" className="scroll-mt-16 py-16 sm:py-20 md:py-24">
-      <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
+    <section
+      id="produk"
+      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24"
+    >
+      <div className="mx-auto max-w-6xl lg:max-w-screen-xl xl:max-w-none px-4 sm:px-6 md:px-8 lg:px-12 xl:px-16">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
             Produk Kami

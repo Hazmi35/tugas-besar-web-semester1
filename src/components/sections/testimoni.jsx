@@ -45,7 +45,7 @@ export function TestimoniSection() {
   ];
 
   return (
-    <section id="testimoni" className="scroll-mt-16 py-16 sm:py-20 md:py-24">
+    <section id="testimoni" className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24">
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">
