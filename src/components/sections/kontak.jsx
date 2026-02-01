@@ -13,9 +13,18 @@ export function KontakSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // TODO: Implement form submission
-    console.log("Form submitted:", formData);
-    alert("Terima kasih! Pesan Anda akan segera kami respon.");
+    const phoneNumber = "6281234567890";
+    const message = `Halo! Saya ${formData.name}.
+
+${formData.message}
+
+Terima kasih!`;
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    window.open(whatsappUrl, "_blank");
+
     setFormData({ name: "", email: "", phone: "", message: "" });
   };
 
@@ -77,33 +86,6 @@ export function KontakSection() {
                 </div>
               ))}
             </div>
-
-            <div className="mt-8 rounded-xl border bg-card p-6">
-              <h3 className="font-semibold text-lg">Follow Us</h3>
-              <div className="mt-4 flex gap-4">
-                <a
-                  href="https://facebook.com"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-opacity hover:opacity-90"
-                  aria-label="Facebook"
-                >
-                  <span className="text-lg">📘</span>
-                </a>
-                <a
-                  href="https://instagram.com"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-opacity hover:opacity-90"
-                  aria-label="Instagram"
-                >
-                  <span className="text-lg">📷</span>
-                </a>
-                <a
-                  href="https://wa.me"
-                  className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary text-primary-foreground transition-opacity hover:opacity-90"
-                  aria-label="WhatsApp"
-                >
-                  <span className="text-lg">💬</span>
-                </a>
-              </div>
-            </div>
           </div>
 
           <div className="rounded-xl border bg-card p-6 sm:p-8">
@@ -125,42 +107,6 @@ export function KontakSection() {
                   required
                   className="w-full rounded-lg border bg-background px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
                   placeholder="Nama Anda"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="email"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Email
-                </label>
-                <input
-                  type="email"
-                  id="email"
-                  name="email"
-                  value={formData.email}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-lg border bg-background px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="email@example.com"
-                />
-              </div>
-              <div>
-                <label
-                  htmlFor="phone"
-                  className="block text-sm font-medium mb-2"
-                >
-                  Nomor Telepon
-                </label>
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  value={formData.phone}
-                  onChange={handleChange}
-                  required
-                  className="w-full rounded-lg border bg-background px-4 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-primary"
-                  placeholder="+62 812-3456-7890"
                 />
               </div>
               <div>

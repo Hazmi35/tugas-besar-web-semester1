@@ -1,3 +1,5 @@
+"use client";
+
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 
@@ -30,7 +32,16 @@ export default function Home() {
                 berbagai varian rasa yang menggugah selera
               </p>
               <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
-                <Button size="lg" className="rounded-xl px-8 shadow-lg bg-orange-600 hover:bg-orange-700 text-white">
+                <Button
+                  size="lg"
+                  className="rounded-xl px-8 shadow-lg bg-orange-600 hover:bg-orange-700 text-white"
+                  onClick={() =>
+                    window.open(
+                      "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
+                      "_blank",
+                    )
+                  }
+                >
                   Pesan Sekarang
                 </Button>
                 <Button

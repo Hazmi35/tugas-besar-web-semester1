@@ -47,18 +47,39 @@ export function Navbar() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2 sm:ml-0">
-          <Button size="sm" className="rounded-lg px-3 shadow-sm sm:hidden">
+          <Button
+            size="sm"
+            className="rounded-lg px-3 shadow-sm sm:hidden"
+            onClick={() =>
+              window.open(
+                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
+                "_blank",
+              )
+            }
+          >
             Pesan
           </Button>
           <Button
             size="sm"
             className="hidden rounded-lg px-3 shadow-sm sm:inline-flex lg:hidden"
+            onClick={() =>
+              window.open(
+                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
+                "_blank",
+              )
+            }
           >
             Pesan
           </Button>
           <Button
             size="lg"
             className="hidden rounded-xl px-6 shadow-sm lg:inline-flex"
+            onClick={() =>
+              window.open(
+                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
+                "_blank",
+              )
+            }
           >
             Pesan Sekarang
           </Button>
