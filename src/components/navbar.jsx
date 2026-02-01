@@ -17,39 +17,43 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-30 border-b bg-background/80 backdrop-blur">
-      <div className="mx-auto flex h-20 max-w-6xl items-center justify-between px-4 sm:px-8">
-        <div className="flex flex-1 items-center gap-6 sm:gap-10">
-          <Link href="/" className="flex items-center gap-3">
-            <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm">
-              TB
-            </div>
-            <span className="text-xl font-semibold leading-none tracking-tight">
-              Toko Brownies
-            </span>
-          </Link>
+      <div className="mx-auto flex h-16 max-w-6xl items-center justify-between px-4 sm:h-20 md:h-20 sm:px-6 md:px-8">
+        <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4">
+          <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm">
+            TB
+          </div>
+          <span className="text-base font-semibold leading-none tracking-tight sm:text-lg md:text-xl">
+            Toko Brownies
+          </span>
+        </Link>
 
-          <nav className="hidden items-center gap-8 text-base font-medium sm:flex">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-foreground/70 transition-colors hover:text-foreground"
-              >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
-        </div>
+        <nav className="hidden items-center gap-6 text-sm font-medium sm:gap-6 sm:text-base sm:flex md:gap-8 sm:ml-8 md:ml-12">
+          {navItems.map((item) => (
+            <Link
+              key={item.href}
+              href={item.href}
+              className="text-foreground/70 transition-colors hover:text-foreground"
+            >
+              {item.label}
+            </Link>
+          ))}
+        </nav>
 
-        <div className="flex flex-none items-center gap-2">
+        <div className="ml-auto flex items-center gap-2">
+          <Button size="sm" className="rounded-lg px-3 shadow-sm sm:hidden">
+            Pesan
+          </Button>
+          <Button
+            size="sm"
+            className="hidden rounded-lg px-3 shadow-sm sm:inline-flex lg:hidden"
+          >
+            Pesan
+          </Button>
           <Button
             size="lg"
-            className="hidden rounded-xl px-6 shadow-sm sm:inline-flex"
+            className="hidden rounded-xl px-6 shadow-sm lg:inline-flex"
           >
             Pesan Sekarang
-          </Button>
-          <Button size="sm" className="rounded-lg px-4 shadow-sm sm:hidden">
-            Pesan
           </Button>
           <Button
             variant="ghost"
