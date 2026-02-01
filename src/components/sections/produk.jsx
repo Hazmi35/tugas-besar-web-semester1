@@ -1,6 +1,7 @@
 "use client";
 
 import { Check, Minus, Plus, ShoppingCart } from "lucide-react";
+import Image from "next/image";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useCheckoutModal } from "@/contexts/checkout-modal-context";
@@ -57,10 +58,14 @@ export function ProdukSection() {
                 key={product.name}
                 className="group overflow-hidden rounded-2xl border bg-card transition-all hover:shadow-lg flex flex-col h-full"
               >
-                <div className="aspect-square overflow-hidden bg-muted">
-                  <div className="grid h-full w-full place-items-center bg-gradient-to-br from-primary/10 to-primary/5">
-                    <span className="text-4xl">🧁</span>
-                  </div>
+                <div className="aspect-square overflow-hidden bg-muted relative">
+                  <Image
+                    src={product.image}
+                    alt={product.name}
+                    fill
+                    className="object-cover"
+                    sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
+                  />
                 </div>
                 <div className="p-5 flex flex-col flex-1">
                   <h3 className="font-semibold text-lg line-clamp-1">
