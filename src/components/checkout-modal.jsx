@@ -73,9 +73,9 @@ export function CheckoutModal({ isOpen, onClose }) {
       />
 
       {/* Modal */}
-      <div className="relative bg-card border rounded-xl shadow-2xl w-full max-w-2xl max-h-[85vh] overflow-hidden my-auto">
+      <div className="relative bg-card border rounded-xl shadow-2xl w-full max-w-2xl max-h-[90vh] overflow-hidden my-auto flex flex-col">
         {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b">
+        <div className="flex items-center justify-between p-6 border-b flex-shrink-0">
           <h2 className="text-xl font-semibold">Checkout</h2>
           <Button
             variant="ghost"
@@ -88,7 +88,7 @@ export function CheckoutModal({ isOpen, onClose }) {
         </div>
 
         {/* Content */}
-        <div className="overflow-y-auto max-h-96 p-6">
+        <div className="overflow-y-auto flex-1 p-6">
           <div className="space-y-4">
             {/* Order Summary */}
             <div className="bg-muted/30 rounded-lg p-4 space-y-2">
@@ -186,7 +186,7 @@ export function CheckoutModal({ isOpen, onClose }) {
         </div>
 
         {/* Footer */}
-        <div className="border-t p-6 flex gap-2">
+        <div className="border-t p-6 flex gap-2 flex-shrink-0">
           <Button variant="outline" onClick={onClose} className="flex-1">
             Batal
           </Button>
