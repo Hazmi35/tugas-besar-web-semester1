@@ -6,10 +6,10 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 
 const navItems = [
-  { href: "#produk", label: "Produk" },
-  { href: "#tentang", label: "Tentang Kami" },
-  { href: "#testimoni", label: "Testimoni" },
-  { href: "#kontak", label: "Kontak" },
+  { href: "/produk", label: "Produk" },
+  { href: "/tentang-kami", label: "Tentang Kami" },
+  { href: "/testimoni", label: "Testimoni" },
+  { href: "/kontak", label: "Kontak" },
 ];
 
 export function Navbar() {
