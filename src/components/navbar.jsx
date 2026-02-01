@@ -20,10 +20,10 @@ export function Navbar() {
       <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-20 md:h-20 sm:px-6 md:px-8">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4">
           <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm">
-            TB
+            HB
           </div>
           <span className="text-base font-semibold leading-none tracking-tight sm:text-lg md:text-xl">
-            Toko Brownies
+            Hepburn's Brownies
           </span>
         </Link>
 

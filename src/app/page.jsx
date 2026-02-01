@@ -10,8 +10,8 @@ export default function Home() {
           Ruang kosong. Mulai bikin section atau komponen kamu di sini.
         </div>
         <div className="mt-6 text-xs text-muted-foreground">
-          Terinspirasi dari desain Toko Brownies. Silakan lanjutkan bikin hero,
-          produk, atau testimoni.
+          Get your favorite brownies here! Also available on Grabfood & Gofood
+          Bandung
         </div>
       </main>
     </div>
