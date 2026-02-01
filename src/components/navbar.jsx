@@ -1,6 +1,6 @@
 "use client";
 
-import { Menu, X } from "lucide-react";
+import { Instagram, Menu, X } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -55,6 +55,15 @@ export function Navbar() {
           >
             Pesan Sekarang
           </Button>
+          <Link
+            href="https://instagram.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Instagram"
+            className="hidden rounded-lg p-2 text-muted-foreground transition-colors hover:text-foreground sm:inline-flex"
+          >
+            <Instagram className="h-5 w-5" />
+          </Link>
           <Button
             variant="ghost"
             size="icon"
