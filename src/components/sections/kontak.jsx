@@ -59,7 +59,7 @@ Terima kasih!`;
   return (
     <section
       id="kontak"
-      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24"
+      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24 min-h-screen"
     >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="text-center">
