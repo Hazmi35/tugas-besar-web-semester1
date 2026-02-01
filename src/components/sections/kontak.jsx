@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { BUSINESS_INFO, getWhatsAppLink } from "@/lib/constants/business";
 
 export function KontakSection() {
   const [formData, setFormData] = useState({
@@ -13,16 +14,13 @@ export function KontakSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    const phoneNumber = "6281234567890";
     const message = `Halo! Saya ${formData.name}.
 
 ${formData.message}
 
 Terima kasih!`;
 
-    const encodedMessage = encodeURIComponent(message);
-
-    const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
+    const whatsappUrl = getWhatsAppLink(message);
     window.open(whatsappUrl, "_blank");
 
     setFormData({ name: "", email: "", phone: "", message: "" });
@@ -39,22 +37,22 @@ Terima kasih!`;
     {
       icon: "📍",
       title: "Alamat",
-      content: "Jl. Raya Brownies No. 123, Jakarta Selatan",
+      content: BUSINESS_INFO.address,
     },
     {
       icon: "📞",
       title: "Telepon",
-      content: "+62 812-3456-7890",
+      content: BUSINESS_INFO.phoneDisplay,
     },
     {
       icon: "✉️",
       title: "Email",
-      content: "hello@hepburnsbrownies.com",
+      content: BUSINESS_INFO.email,
     },
     {
       icon: "⏰",
       title: "Jam Operasional",
-      content: "Senin - Minggu: 09.00 - 21.00 WIB",
+      content: BUSINESS_INFO.operatingHours,
     },
   ];
 

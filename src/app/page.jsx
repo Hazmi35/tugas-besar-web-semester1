@@ -1,5 +1,4 @@
-"use client";
-
+import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { Button } from "@/components/ui/button";
 
@@ -35,25 +34,20 @@ export default function Home() {
                 <Button
                   size="lg"
                   className="rounded-xl px-8 shadow-lg bg-orange-600 hover:bg-orange-700 text-white"
-                  onClick={() =>
-                    window.open(
-                      "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
-                      "_blank",
-                    )
-                  }
+                  asChild
                 >
-                  Pesan Sekarang
+                  <Link href="/produk">Lihat Produk</Link>
                 </Button>
                 <Button
                   size="lg"
                   className="rounded-xl px-8 bg-white text-orange-600 hover:bg-gray-100 font-semibold"
                   asChild
                 >
-                  <a href="/produk">Lihat Produk</a>
+                  <Link href="/tentang-kami">Tentang Kami</Link>
                 </Button>
               </div>
               <p className="mt-8 text-sm text-gray-200">
-                🛵 Tersedia di GrabFood & GoFood Bandung
+                🛵 Juga Tersedia di GrabFood & GoFood Bandung
               </p>
             </div>
           </div>

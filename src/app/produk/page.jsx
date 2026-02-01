@@ -1,11 +1,8 @@
+"use client";
+
 import Link from "next/link";
 import { Navbar } from "@/components/navbar";
 import { ProdukSection } from "@/components/sections/produk";
-
-export const metadata = {
-  title: "Produk - Hepburn's Brownies",
-  description: "Jelajahi koleksi produk brownies premium kami",
-};
 
 export default function ProdukPage() {
   return (

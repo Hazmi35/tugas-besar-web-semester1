@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { useCheckoutModal } from "@/contexts/checkout-modal-context";
+import { BUSINESS_INFO } from "@/lib/constants/business";
 
 const navItems = [
   { href: "/produk", label: "Produk" },
@@ -15,6 +17,8 @@ const navItems = [
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const { setShowCheckoutModal, cart } = useCheckoutModal();
+  const cartItemsCount = cart.reduce((sum, item) => sum + item.quantity, 0);
 
   return (
     <header className="sticky top-0 z-30 border-b bg-background/80 backdrop-blur">
@@ -47,44 +51,8 @@ export function Navbar() {
         </nav>
 
         <div className="ml-auto flex items-center gap-2 sm:ml-0">
-          <Button
-            size="sm"
-            className="rounded-lg px-3 shadow-sm sm:hidden"
-            onClick={() =>
-              window.open(
-                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
-                "_blank",
-              )
-            }
-          >
-            Pesan
-          </Button>
-          <Button
-            size="sm"
-            className="hidden rounded-lg px-3 shadow-sm sm:inline-flex lg:hidden"
-            onClick={() =>
-              window.open(
-                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
-                "_blank",
-              )
-            }
-          >
-            Pesan
-          </Button>
-          <Button
-            size="lg"
-            className="hidden rounded-xl px-6 shadow-sm lg:inline-flex"
-            onClick={() =>
-              window.open(
-                "https://wa.me/6281234567890?text=Halo!%20Saya%20ingin%20memesan%20brownies.%20Terima%20kasih!",
-                "_blank",
-              )
-            }
-          >
-            Pesan Sekarang
-          </Button>
           <Link
-            href="https://www.instagram.com/hepburnsbrownie/"
+            href={BUSINESS_INFO.instagram}
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"
@@ -92,6 +60,42 @@ export function Navbar() {
           >
             <Instagram className="h-5 w-5" />
           </Link>
+          <Button
+            size="sm"
+            className="rounded-lg px-3 shadow-sm sm:hidden relative"
+            onClick={() => setShowCheckoutModal(true)}
+          >
+            Checkout
+            {cartItemsCount > 0 && (
+              <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] text-white font-medium">
+                {cartItemsCount}
+              </span>
+            )}
+          </Button>
+          <Button
+            size="sm"
+            className="hidden rounded-lg px-3 shadow-sm sm:inline-flex lg:hidden relative"
+            onClick={() => setShowCheckoutModal(true)}
+          >
+            Checkout
+            {cartItemsCount > 0 && (
+              <span className="absolute -top-1 -right-1 flex h-4 w-4 items-center justify-center rounded-full bg-red-500 text-[10px] text-white font-medium">
+                {cartItemsCount}
+              </span>
+            )}
+          </Button>
+          <Button
+            size="lg"
+            className="hidden rounded-xl px-6 shadow-sm lg:inline-flex relative"
+            onClick={() => setShowCheckoutModal(true)}
+          >
+            Checkout
+            {cartItemsCount > 0 && (
+              <span className="absolute -top-1 -right-1 flex h-5 w-5 items-center justify-center rounded-full bg-red-500 text-[11px] font-semibold text-white">
+                {cartItemsCount}
+              </span>
+            )}
+          </Button>
           <Button
             variant="ghost"
             size="icon"
