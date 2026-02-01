@@ -1,6 +1,7 @@
 "use client";
 
 import { Instagram, Menu, X } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
@@ -19,8 +20,14 @@ export function Navbar() {
     <header className="sticky top-0 z-30 border-b bg-background/80 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-6xl items-center px-4 sm:h-20 md:h-20 sm:px-6 md:px-8">
         <Link href="/" className="flex items-center gap-2 sm:gap-3 md:gap-4">
-          <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm">
-            HB
+          <div className="grid h-10 w-10 place-items-center rounded-lg bg-primary text-sm font-semibold uppercase tracking-tight text-primary-foreground shadow-sm overflow-hidden">
+            <Image
+              src="/icon.png"
+              alt="Hepburn's Brownies Logo"
+              width={40}
+              height={40}
+              className="h-full w-full object-contain"
+            />
           </div>
           <span className="text-base font-semibold leading-none tracking-tight sm:text-lg md:text-xl">
             Hepburn's Brownies
@@ -56,7 +63,7 @@ export function Navbar() {
             Pesan Sekarang
           </Button>
           <Link
-            href="https://instagram.com"
+            href="https://www.instagram.com/hepburnsbrownie/"
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Instagram"

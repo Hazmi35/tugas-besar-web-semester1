@@ -9,10 +9,10 @@ export const metadata = {
 
 export default function TentangPage() {
   return (
-    <div className="min-h-screen bg-background text-foreground flex flex-col">
+    <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <main className="flex-1">
+      <main>
         {/* Breadcrumb */}
         <div className="border-b bg-muted/40">
           <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 md:px-8">

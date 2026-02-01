@@ -12,7 +12,7 @@ export default function TestimoniPage() {
     <div className="min-h-screen bg-background text-foreground">
       <Navbar />
 
-      <main className="min-h-screen">
+      <main>
         {/* Breadcrumb */}
         <div className="border-b bg-muted/40">
           <div className="mx-auto max-w-6xl px-4 py-3 sm:px-6 md:px-8">
