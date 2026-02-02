@@ -39,13 +39,16 @@ export function TestimoniSection() {
       name: "Dimas Aditya",
       role: "Birthday Gift",
       content:
-        "Beli buat kado ulang tahun temen, dia suka banget! Packagingnya premium, cocok buat gift. Next time order buat diri sendiri deh 😄",
-      rating: 5,
+        "Beli buat kado ulang tahun temen, dia suka banget! Packagingnya premium, cocok buat gift, tapi sayangnya cuma ada di Bandung. Next time order buat diri sendiri deh 😄",
+      rating: 4,
     },
   ];
 
   return (
-    <section id="testimoni" className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24">
+    <section
+      id="testimoni"
+      className="scroll-mt-16 bg-muted/40 py-16 sm:py-20 md:py-24"
+    >
       <div className="mx-auto max-w-6xl px-4 sm:px-6 md:px-8">
         <div className="text-center">
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl md:text-5xl">

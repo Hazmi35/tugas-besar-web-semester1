@@ -35,7 +35,7 @@ export function TentangSection() {
             </h2>
             <p className="mt-4 text-base text-muted-foreground sm:text-lg">
               Hepburn's Brownies adalah brand brownies premium yang didirikan
-              pada tahun 2020 dengan komitmen untuk menghadirkan brownies
+              pada tahun 2018 dengan komitmen untuk menghadirkan brownies
               berkualitas tinggi dengan rasa yang autentik dan tekstur yang
               sempurna.
             </p>
@@ -48,7 +48,7 @@ export function TentangSection() {
             <div className="mt-8 flex flex-wrap gap-4">
               <div className="rounded-lg border bg-card p-4 text-center">
                 <div className="text-2xl font-bold text-primary sm:text-3xl">
-                  5000+
+                  100+
                 </div>
                 <div className="mt-1 text-sm text-muted-foreground">
                   Order Selesai
